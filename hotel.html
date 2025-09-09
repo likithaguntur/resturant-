@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVPP Canteen</title>
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+
+  <!-- Welcome -->
+  <div class="welcome">
+    <img src="hotelback.jpg" alt="Welcome">
+    <h1> Welcome to SVPP Canteen 🍴</h1>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>>Welcome to SVPP Canteen</h1>
+    <p>Delicious Home-made Food with Love ❤</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#starters">Starters</a>
+    <a href="#main-course">Main Course</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#cart">Cart</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <!-- Starters -->
+  <section id="starters" class="menu-section">
+    <h2>Starters</h2>
+    <div class="menu-items">
+
+      <div class="item">
+        <img src="soup.jpg" alt="Soup">
+        <h3>Soups</h3>
+        <select id="soup-type">
+          <option value="Tomato Soup-120">Tomato Soup - ₹120</option>
+          <option value="Sweet Corn Soup-130">Sweet Corn Soup - ₹130</option>
+          <option value="Hot & Sour Soup-140">Hot & Sour Soup - ₹140</option>
+        </select>
+        <label>Qty:</label>
+        <input type="number" id="qty-soup" value="1" min="1" max="10">
+        <button onclick="addVariety('soup-type','qty-soup')">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="springrole.jpg" alt="Spring Rolls">
+        <h3>Spring Rolls</h3>
+        <p>₹150</p>
+        <label>Qty:</label>
+        <input type="number" id="qty-roll" value="1" min="1" max="10">
+        <button onclick="addToCart('Spring Rolls',150,'qty-roll')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Course -->
+  <section id="main-course" class="menu-section">
+    <h2>Main Course</h2>
+    <div class="menu-items">
+
+      <div class="item">
+        <img src="biryani.jpg" alt="Biryani">
+        <h3>Biryani</h3>
+        <select id="biryani-type">
+          <option value="Veg Biryani-180">Veg Biryani - ₹180</option>
+          <option value="Chicken Biryani-250">Chicken Biryani - ₹250</option>
+          <option value="Mutton Biryani-300">Mutton Biryani - ₹300</option>
+        </select>
+        <label>Qty:</label>
+        <input type="number" id="qty-biryani" value="1" min="1" max="10">
+        <button onclick="addVariety('biryani-type','qty-biryani')">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="pannercurry.jpg" alt="Paneer Curry">
+        <h3>Paneer Curry</h3>
+        <p>₹220</p>
+        <label>Qty:</label>
+        <input type="number" id="qty-paneer" value="1" min="1" max="10">
+        <button onclick="addToCart('Paneer Butter Masala',220,'qty-paneer')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Drinks -->
+  <section id="drinks" class="menu-section">
+    <h2>Drinks</h2>
+    <div class="menu-items">
+
+      <div class="item">
+        <img src="lassi.jpg" alt="Lassi">
+        <h3>Lassi</h3>
+        <select id="lassi-type">
+          <option value="Mango Lassi-80">Mango Lassi - ₹80</option>
+          <option value="Sweet Lassi-70">Sweet Lassi - ₹70</option>
+          <option value="Strawberry Lassi-80">Strawberry Lassi- ₹80</option>
+          <option value="Chocolate Lassi-90">Chocolate Lassi - ₹90</option>
+        </select>
+        <label>Qty:</label>
+        <input type="number" id="qty-lassi" value="1" min="1" max="10">
+        <button onclick="addVariety('lassi-type','qty-lassi')">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="coffee.jpg" alt="Coffee">
+        <h3>Cold Coffee</h3>
+        <p>₹100</p>
+        <label>Qty:</label>
+        <input type="number" id="qty-coffee" value="1" min="1" max="10">
+        <button onclick="addToCart('Cold Coffee',100,'qty-coffee')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Desserts -->
+  <section id="desserts" class="menu-section">
+    <h2>Desserts</h2>
+
+    <div class="menu-items">
+    <!-- Gulab Jamun -->
+    <div class="item">
+      <img src="gulabjamun.jpg" alt="Gulab Jamun">
+      <h3>Gulab Jamun</h3>
+      <p>₹60</p>
+      <label>Qty:</label>
+      <input type="number" id="qty-jamun" value="1" min="1" max="10">
+      <button onclick="addToCart('Gulab Jamun',60,'qty-jamun')">Add to Cart</button>
+    </div>
+
+    <!-- Ice Cream -->
+    <div class="item">
+      <img src="icecream.jpg" alt="Ice Cream">
+      <h3>Ice Cream</h3>
+      <select id="icecream-type">
+        <option value="Vanilla Kiss-150">Vanilla Kiss - ₹150</option>
+        <option value="Butterscotch Hug-200">Butterscotch Hug - ₹200</option>
+        <option value="Honeymoon Delight-300">Honeymoon Delight - ₹300</option>
+      </select>
+      <label>Qty:</label>
+      <input type="number" id="qty-icecream" value="1" min="1" max="10">
+      <button onclick="addVariety('icecream-type','qty-icecream')">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="cart-section">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cartList"></ul>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <button onclick="printBill()">Print Bill</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About This Project</h2>
+    <img src="college logo.jpg" class="college-logo" alt="College Logo">
+    <p><strong>Project By:</strong> Likitha Guntur</p>
+    <p><strong>College:</strong> Sri Venkatesa Perumal College</p>
+    <p><strong>Course:</strong> B.Tech in Computer Science</p>
+    <p>This project is created using HTML, CSS, and JavaScript as a mini-project demonstration.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SVPP Canteen | Designed with ❤</p>
+  </footer>
+
+  <script src="hotel.js"></script>
+</body>
+</html>
